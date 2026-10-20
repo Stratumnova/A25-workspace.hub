@@ -24,3 +24,7 @@ Notes are not owner decisions or project verification. Preserve original notes; 
 - Never invent source contents, verification, owner approval or seal. Owner-sealed material is trusted A25 material and not reopened by AI.
 - No secrets or real private documents in this public workspace.
 - Creating a folder or README does not authorize project builds, deployment, migrations or team appointments.
+
+## Current owner-directed workflow note
+
+New projects start and remain in `A25.archives/projects/` as both active workspaces and permanent archives. `A25.office/` handles team orders and requests; `A25.chat/` handles informal GPT/Claude/owner exchanges. The proposed Archives Bot will help route requests, preserve original evidence and decisions, maintain project navigation, and support recovery without creating duplicate project homes. No bot is implemented or assigned by this note.
