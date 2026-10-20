@@ -95,4 +95,11 @@ class ChatEngine:
             return seq
     def unseen(self,room,actor,limit=100):
         who=principal(actor)
-        return [m for m in self.read(room,actor,self.cursor(room,actor),limit) if m["author"]!=who]
+        if type(limit)!=int or not 1<=limit<=500: raise ChatError("invalid pagination")
+        with self.db() as c:
+            self.require_room(c,room)
+            cursor=c.execute("SELECT through_seq FROM cursors WHERE room_id=? AND reader=?",(room,who)).fetchone()
+            through=cursor["through_seq"] if cursor else 0
+            return [dict(m) for m in c.execute(
+                "SELECT * FROM messages WHERE room_id=? AND seq>? AND author<>? ORDER BY seq LIMIT ?",
+                (room,through,who,limit))]
