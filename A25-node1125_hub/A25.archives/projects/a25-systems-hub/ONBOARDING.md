@@ -1,37 +1,23 @@
-# A25 Systems Hub — Project Onboarding
+# A25 Systems Hub — Parent Project Onboarding
 
 Owner: Zed
-Status: Workspace setup only; build authorization pending
+Status: Workspace structure established; implementation authorization pending
+Governing charter: [Node 11](../../../README.md)
 
-## First read
+## One system, separate permanent component rooms
 
-Read the [Node 11 charter](../../../README.md), [project home](README.md), your team's Office rules and the actual authorized work order. The first planned milestone is the Message Hub. Historical Pocket Server material is reference only under the owner's October 19, 2026, 8:07 PM MDT cutoff.
+A25 Systems Hub is the overall project. Each distinct build lives in its own sibling folder under this parent and **stays there** for design, coding, testing, fixes, recovery, packaging and future continuation. Do not move a component once work starts. A component can be ZIP-packaged and restored at its same repository path. Isolate faults and fix the affected component rather than untangling a shared mixed workspace.
 
-## Project work areas
+## Current rooms
 
-- [chatroom](chatroom/README.md): Message Hub design and evidence, not a running chat server.
-- [Archives inbox](archives/inbox/README.md) and [outbox](archives/outbox/README.md): project evidence, indexing and recovery requests/replies.
-- [Security inbox](security/inbox/README.md) and [outbox](security/outbox/README.md): security review requests/replies.
-- [Builders inbox](builders/inbox/README.md) and [outbox](builders/outbox/README.md): assigned work and builder results.
-- [Project lead](project-lead/README.md): Workshop lead build notes, dependencies and decisions.
-- [Historical sources](HISTORICAL-SOURCES.md): old repositories, read-only.
+- [A25chatroom](A25chatroom/README.md): first component; planned persistent GPT/Claude/owner messaging. Read its [component onboarding](A25chatroom/ONBOARDING.md) for Archives, Security and Builders inbox/outbox folders and Workshop project-lead notes.
+- [main build](main%20build/README.md): integration area where independently verified, approved components come together to make the complete system. It is not a replacement for their original source folders.
+- [Historical source index](HISTORICAL-SOURCES.md): prior repositories are read-only reference.
 
-## Team lanes
+Future components such as terminals, tunnels, identity, storage and recovery get their own sibling folders only when their scope is actually authorized and needed. Do not invent empty project skeletons.
 
-Workshop lead coordinates plans and approved orders. Builders execute assigned implementation. Security handles risk, identity and permission review. Archives handles project records, indexing, evidence custody and recovery. The owner controls approvals. No team assumes another team's authority.
+## Team rules and information exchange
 
-Each team works in its own area. Ask the receiving team before placing notes in its area, unless explicitly permitted. Do not change another team's records without authorization.
+Each component room contains its own team inbox/outbox areas as needed. Workshop lead coordinates plans and approved orders; builders perform assigned work; Security reviews security; Archives indexes and preserves; Zed controls owner decisions. Teams stay in their own lanes. Leave notes in another team's area only when asked or explicitly permitted. Cross-team requests and replies identify source, author, scope and status. Formal Office work orders and official responses remain in Office, with pointers into component records.
 
-## Request flow
-
-1. Cite the original Office request/order, sender, scope, sources and expected response.
-2. Place a project-specific request in the receiving team's inbox only with appropriate permission.
-3. That team handles its part and returns findings to its outbox, linking the request.
-4. Keep formal Office orders and official responses in Office; project folders hold substantive work and links.
-5. Archives indexes actual evidence and decisions. The same project folder remains active and permanently archived.
-
-Record author, role, real time and time source on substantive dated records. Distinguish REFERENCE, HISTORICAL CLAIM, VERIFIED, ADOPTED, SUPERSEDED and UNKNOWN. Preserve original materials and disagreements.
-
-## Restrictions
-
-Only Stratumnova/A25-workspace.hub on main. No fork, new branch, new repository or old-repository changes. No live server, phone, tunnel, deployment or code changes authorized by these folders. No secrets in public GitHub. A work request is not an approved implementation order.
+Use the charter's real UTC timestamps and evidence labels; never invent verification, approvals, completed tests or attribution. No forks, branches or new repositories, and no writes to historical repositories. No source implementation, live services, phone/tunnel changes or deployment without a separate approved order. No secrets in public GitHub.
