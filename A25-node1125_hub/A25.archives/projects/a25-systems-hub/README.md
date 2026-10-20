@@ -6,7 +6,7 @@ Archives custody: A25 Archives
 Status: Project landing established; Workshop planning/build authorization requested, not granted by this document
 Repository: Stratumnova/A25-workspace.hub
 Branch: main
-Charter: [Node 11 root charter](../../README.md)
+Charter: [Node 11 root charter](../../../README.md)
 
 ## Purpose and project boundary
 
@@ -24,9 +24,11 @@ The A25 Systems Hub is the planned official successor to the historical Pocket S
 6. Controlled terminal/workshop access, action audit and separation of messaging from command execution.
 7. Backups, restore checks, recovery, independent verification, owner-approved migration and eventual retirement of the old Pocket Server.
 
-## Team workspace and onboarding
+## Component workspaces and onboarding
 
-Read [project onboarding](ONBOARDING.md) before filing or acting. The [chatroom work area](chatroom/README.md) holds the first milestone's project records. Each team has separate project exchange shelves: [Archives inbox](archives/inbox/README.md) / [outbox](archives/outbox/README.md), [Security inbox](security/inbox/README.md) / [outbox](security/outbox/README.md), and [Builders inbox](builders/inbox/README.md) / [outbox](builders/outbox/README.md). The [project lead folder](project-lead/README.md) holds Workshop leadership notes. These shelves do not replace official Office orders or grant cross-team access.
+Read [parent onboarding](ONBOARDING.md). The first self-contained build is [A25chatroom](A25chatroom/README.md), with its own [component onboarding](A25chatroom/ONBOARDING.md), Archives, Security and Builders inbox/outbox rooms, and Workshop [project-lead notes](A25chatroom/project-lead/README.md). The sibling [main build](main%20build/README.md) is the integration area for approved, independently verified components.
+
+Every future component (terminals, tunnels and others) receives its own permanent sibling folder when needed. Design, code, tests, repairs and recovery stay with the component, even when ZIP-packaged or integrated into the main build. Formal Office authority remains separate.
 
 ## Source and coordination links
 
