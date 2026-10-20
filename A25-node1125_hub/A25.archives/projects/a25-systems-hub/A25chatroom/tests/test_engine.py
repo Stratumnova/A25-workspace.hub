@@ -52,6 +52,20 @@ class Tests(unittest.TestCase):
         seq=[r["seq"] for r in rows]
         self.assertEqual(len(set(seq)),50)
         self.assertEqual([r["seq"] for r in self.e.read(self.room,self.a)],sorted(seq))
+    def test_unseen_pagination_skips_own_messages(self):
+        self.e.post(self.room,"own-1",self.a)
+        self.e.post(self.room,"own-2",self.a)
+        external1=self.e.post(self.room,"external-1",self.b)
+        self.e.post(self.room,"own-3",self.a)
+        external2=self.e.post(self.room,"external-2",self.b)
+        self.assertEqual([m["id"] for m in self.e.unseen(self.room,self.a,limit=1)],[external1["id"]])
+        self.assertEqual([m["id"] for m in self.e.unseen(self.room,self.a,limit=2)],[external1["id"],external2["id"]])
+        self.assertEqual(self.e.cursor(self.room,self.a),0)
+        self.e.ack(self.room,self.a,external1["seq"])
+        self.assertEqual([m["id"] for m in self.e.unseen(self.room,self.a,limit=1)],[external2["id"]])
+        self.assertEqual(self.e.unseen(self.room,self.b,limit=1)[0]["author"],"gpt")
+        with self.assertRaises(ChatError): self.e.unseen(self.room,self.a,limit=0)
+        with self.assertRaises(ChatError): self.e.unseen(self.room,self.a,limit=501)
     def test_invalid_and_spoof(self):
         for bad in (""," "*3,"x"*10001):
             with self.assertRaises(ChatError): self.e.post(self.room,bad,self.a)
