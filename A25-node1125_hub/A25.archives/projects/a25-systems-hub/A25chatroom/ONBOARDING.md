@@ -2,7 +2,11 @@
 
 Owner: Zed
 Parent project: [A25 Systems Hub](../README.md)
-Status: First component workspace; no build or deployment authorization
+Status: PROVISIONAL DRAFT — awaiting owner approval of workspace layout; no build or deployment authorization
+
+## Owner approval required
+
+This onboarding is a provisional draft. The proposed approved structure is recorded in [Build Requests](../../build-request/a25-systems-hub-A25chatroom/README.md). Do not treat these existing files as the approved component layout until Zed explicitly accepts it.
 
 ## Work here, stay here
 
