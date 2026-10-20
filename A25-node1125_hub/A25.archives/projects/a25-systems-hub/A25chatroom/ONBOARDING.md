@@ -2,11 +2,11 @@
 
 Owner: Zed
 Parent project: [A25 Systems Hub](../README.md)
-Status: PROVISIONAL DRAFT — awaiting owner approval of workspace layout; no build or deployment authorization
+Status: OWNER-APPROVED workspace layout; no deployment or runtime verification
 
-## Owner approval required
+## Owner approval record
 
-This onboarding is a provisional draft. The proposed approved structure is recorded in [Build Requests](../../build-request/a25-systems-hub-A25chatroom/README.md). Do not treat these existing files as the approved component layout until Zed explicitly accepts it.
+Zed approved this component layout and Chatroom V1 plan. See [Approved Build Plan V1](APPROVED-BUILD-PLAN-V1.md). Original requests are preserved for provenance; this approval does not certify implementation.
 
 ## Work here, stay here
 
@@ -33,6 +33,6 @@ The sibling [main build](../main%20build/README.md) is where authorized, verifie
 
 Use only Stratumnova/A25-workspace.hub on main. No new repo, fork or branch; no old repository writes. No unapproved code changes, phone actions, tunnels, services or deployment. No secrets in public GitHub. Read the [Node 11 charter](../../../../README.md) and the original Workshop request before implementation.
 
-## Proposal and approval boundary
+## Approved plan and source
 
-The [Workshop Message Hub proposal](../build-requests/A25-MESSAGE-HUB-WORKSHOP-PROPOSAL-001.md) is **pending Zed's approval**. Proposed plans live in the parent [build-requests](../build-requests/README.md). After Zed explicitly approves a version, preserve the original proposal and place the approved version here in A25chatroom with its owner decision and scope linked. No proposal, approval or folder by itself authorizes code edits or deployment.
+[Approved Chatroom Build Plan V1](APPROVED-BUILD-PLAN-V1.md) is the owner-adopted version. The [original Workshop proposal](../build-requests/A25-MESSAGE-HUB-WORKSHOP-PROPOSAL-001.md) remains unchanged as a historical source. No runtime implementation or deployment is verified by this documentation.
