@@ -1,7 +1,7 @@
 # A25 Terminal — Component Onboarding
 
 **Owner / project lead:** Zed
-**Status:** Owner-approved component plan and location; formal approval ticket pending next pass; no implementation claim
+**Status:** Owner-approved component plan and location; formal approval ticket filed; initial source committed but not certified
 **Sources:** [Approved plan](APPROVED-BUILD-PLAN-V1.md), [original proposal](../build-requests/A25-TERMINAL-CONTROL-TOOLKIT-WORKSHOP-BUILD-REQUEST-DRAFT.md), [Node 11 charter](../../../../README.md)
 
 ## Start here
@@ -24,5 +24,5 @@ Owner instructs GPT/Claude through existing interfaces. General legitimate owner
 ## Not yet established
 No new toolkit implementation, authenticated gateway, passing tests, live operation or integration is certified by these documents. Existing terminal plugins and older builds are evidence to investigate, not automatically adopted code. Do not touch the phone, tunnels, packages, services or historical repositories without separately authorized scope. No secrets or sensitive topology in public GitHub.
 
-## Next pass
-Zed plans to add the formal approval ticket separately. The lead may then issue bounded builder work and seek Security review. Record actual author, time source, scope, execution and observed test results.
+## Current owner addendum and next pass
+Read [Owner Requirements — Test Boundary and Lockdown](project-lead/OWNER-REQUIREMENTS-2026-10-20-TEST-BOUNDARY-AND-LOCKDOWN.md) before testing or designing new controls. The owner supplied one exact authorized Android test directory and requires tests of the new controls, not merely the historical terminal transport. Password lockdown is a newly adopted design requirement, not an implemented or certified protection. [Approval Ticket 001](APPROVAL-TICKET-001.md) is now filed. Continue with scoped builder work and applicable Security review, recording actual author, time source, scope, execution and observed results.
