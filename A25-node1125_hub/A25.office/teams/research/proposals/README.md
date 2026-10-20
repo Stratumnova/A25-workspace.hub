@@ -1,0 +1,5 @@
+# Research Proposals and Handoffs
+
+A proposal is a bridge from exploration to possible official work. State the original build, suggested change, why it matters, evidence, risk, compatibility with the current baseline and exact approval needed. Send to Workshop or the owning team; do not silently implement on their behalf. Proposals can be rejected or deferred without stopping Research. 
+## Standing boundaries
+Research may explore and discuss without owner signoff for every step. Unplanned experiments are welcome inside its own authorized sandbox, with reproducible notes and no effects on approved builds. Research cannot change Workshop's baseline, shared project files, live services, external accounts, credentials, phone, deployment, repository branches or other teams' work without separate authorization. Owner seals remain final; only Zed can reopen them. Reference reports are not proof of current implementation. No new repository or branch without Zed's approval. Do not create synthetic paperwork simply to exercise the process.
