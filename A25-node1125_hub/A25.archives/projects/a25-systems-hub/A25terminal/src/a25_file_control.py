@@ -14,6 +14,10 @@ import zipfile
 ROOT = Path("/storage/emulated/0/Documents/AI_Workshop/terminal tools test folder")
 BAD = set('<>:"\\|?*')
 
+MAX_ZIP_ENTRIES = 1000
+MAX_ZIP_TOTAL_BYTES = 64 * 1024 * 1024
+MAX_ZIP_MEMBER_BYTES = 16 * 1024 * 1024
+
 class BoundaryError(Exception):
     pass
 
