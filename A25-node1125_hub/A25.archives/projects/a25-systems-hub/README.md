@@ -55,3 +55,7 @@ To resume: read this README, the two original requests and the historical-source
 ## Restrictions
 
 No fork, new branch or repository. No writes to old repositories. No source implementation, phone/terminal actions, tunnels, deployments, migrations or old-system retirement under this setup request. Preserve original evidence and distinguish REFERENCE, HISTORICAL CLAIM, VERIFIED, ADOPTED, SUPERSEDED and UNKNOWN. No secrets or private materials in public GitHub.
+
+## Build request and approval path
+
+New component proposals begin in [build-requests](build-requests/README.md), separate from the component workspaces. The [Message Hub proposal](build-requests/A25-MESSAGE-HUB-WORKSHOP-PROPOSAL-001.md) is pending owner review. Only after Zed explicitly approves a version should that approved version be placed in [A25chatroom](A25chatroom/README.md), with the original proposal retained as an identifiable historical record. Each later component follows the same pattern. Approval of a plan does not automatically authorize implementation.
