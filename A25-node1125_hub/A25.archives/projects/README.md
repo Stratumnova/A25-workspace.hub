@@ -5,6 +5,9 @@ Charter: https://github.com/Stratumnova/A25-workspace.hub/blob/main/A25-node1125
 
 **This is where every new project begins and remains.** A project's folder is both its active working area and its permanent archive. No separate active-session folder, transfer step, artificial closeout or mandatory archival action is needed. Inactivity does not delete, move or finish a project.
 
+## Current project landing pages
+- [Security Bot](security-bot/README.md) — future change-audit bot; original requirements linked; build not assigned
+
 ## Working in a project
 Create a project folder when actual project work starts. Use its README to explain purpose, current known status, owning team, active questions and recovery path. Keep substantive design discussions, working notes, actual implementation, original evidence links, tests, failures, decisions, handoffs and later resumptions with that same project. Organize internal subfolders only when the work needs them; avoid empty templates and duplicate source files.
 
