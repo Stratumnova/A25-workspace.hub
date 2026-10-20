@@ -2,9 +2,13 @@
 
 Owner: Zed
 Parent: [A25 Systems Hub](../README.md)
-Status: Workspace established; no implementation authorized
+Status: PROVISIONAL WORKSPACE DRAFT — awaiting Zed's explicit layout approval; no implementation authorized
 
 The A25 Chatroom is the first independent component of the wider A25 Systems Hub. It is designed, tested, repaired and recovered **here**, without moving the component folder later. Its planned purpose is durable messaging for Zed, GPT and Claude, including GPT-led, Claude-led and Shared Roundtable spaces; these labels indicate work leadership, not exclusive access.
+
+## Approval gate
+
+The layout and onboarding here were created before the owner-review staging process. They are provisional, **not approved**. Review the [Chatroom workspace build request](../../build-request/a25-systems-hub-A25chatroom/README.md). Only after Zed approves should the accepted version be recorded here as the approved project setup. No build authorization is implied.
 
 ## Using this room
 
