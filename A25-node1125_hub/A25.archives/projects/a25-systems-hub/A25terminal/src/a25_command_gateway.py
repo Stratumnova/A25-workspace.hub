@@ -1,7 +1,7 @@
 """A25 master-lock gateway prototype (test only; not connected to legacy bridges).
 
 All operations remain bounded by the owner's authorized test folder.
-This is not a production multi-client command gateway.
+This is not a production multi-client command gateway. Caller credentials are\nentered locally with no echo; no caller secret belongs in argv or GitHub.
 """
 import argparse
 import getpass
@@ -19,6 +19,7 @@ STORE = ROOT / "__a25terminal_control_v1__"
 STATE = STORE / ".gateway-lock.json"
 CREDENTIAL = STORE / ".gateway-credential.json"
 CONTROL = STORE / "a25_file_control_atomic.py"
+CALLERS = STORE / ".gateway-callers.json"
 ALLOWED = {"list", "read", "hash", "create", "edit", "copy", "move", "delete", "unzip"}
 
 def verify():
@@ -26,7 +27,7 @@ def verify():
         raise RuntimeError("STOP: authorized test root unavailable")
     if not STORE.is_dir() or STORE.is_symlink() or not STORE.resolve(strict=True).is_relative_to(ROOT):
         raise RuntimeError("STOP: gateway test directory unavailable")
-    for path in (STATE, CREDENTIAL, CONTROL):
+    for path in (STATE, CREDENTIAL, CONTROL, CALLERS):
         if path.is_symlink() or not path.resolve().is_relative_to(ROOT):
             raise RuntimeError("STOP: gateway path redirected")
 
@@ -75,7 +76,50 @@ def unlock():
     atomic_json(STATE, {"version": 1, "locked": False})
     print(json.dumps({"unlocked": True}))
 
-def run(arguments):
+
+def register_caller(caller):
+    """Local test-only enrollment. Never pass secrets as CLI arguments."""
+    verify()
+    if not caller or not caller.isascii() or not all(x.isalnum() or x in "_-" for x in caller):
+        raise RuntimeError("STOP: invalid caller id")
+    if state():
+        raise RuntimeError("STOP: unlock gateway before caller enrollment")
+    if CALLERS.exists():
+        records = json.loads(CALLERS.read_text(encoding="utf-8"))
+    else:
+        records = {}
+    if caller in records:
+        raise RuntimeError("STOP: caller already enrolled")
+    secret = getpass.getpass("Set disposable caller credential: ")
+    confirm = getpass.getpass("Repeat caller credential: ")
+    if len(secret) < 16 or not hmac.compare_digest(secret, confirm):
+        raise RuntimeError("STOP: invalid caller credential")
+    salt = secrets.token_bytes(16)
+    digest = hashlib.scrypt(secret.encode(), salt=salt, n=16384, r=8, p=1)
+    records[caller] = {"salt": salt.hex(), "digest": digest.hex()}
+    atomic_json(CALLERS, records)
+    print(json.dumps({"registered": caller}))
+
+
+def authenticate(caller):
+    """Fail closed on missing/unknown identity; no secret in argv."""
+    if not caller or not CALLERS.is_file() or CALLERS.is_symlink():
+        raise RuntimeError("STOP: caller authentication required")
+    try:
+        records = json.loads(CALLERS.read_text(encoding="utf-8"))
+        record = records[caller]
+        salt = bytes.fromhex(record["salt"])
+        expected = bytes.fromhex(record["digest"])
+    except (OSError, ValueError, KeyError, TypeError):
+        raise RuntimeError("STOP: caller authentication failed")
+    secret = getpass.getpass("Caller credential: ")
+    actual = hashlib.scrypt(secret.encode(), salt=salt, n=16384, r=8, p=1)
+    if not hmac.compare_digest(actual, expected):
+        raise RuntimeError("STOP: caller authentication failed")
+    return True
+
+def run(arguments, caller=None):
+    authenticate(caller)
     if state():
         raise RuntimeError("STOP: master command lock engaged")
     if not arguments or arguments[0] not in ALLOWED:
@@ -86,7 +130,8 @@ def run(arguments):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=("enroll", "status", "lock", "unlock", "run"))
+    parser.add_argument("action", choices=("enroll", "status", "lock", "unlock", "register-caller", "run"))
+    parser.add_argument("--caller", default=None, help="Public caller identifier, never a secret")
     parser.add_argument("arguments", nargs=argparse.REMAINDER)
     args = parser.parse_args()
     verify()
@@ -99,8 +144,10 @@ def main():
         print(json.dumps({"locked": True, "active_command_cancellation": "NOT IMPLEMENTED"}))
     elif args.action == "unlock":
         unlock()
+    elif args.action == "register-caller":
+        register_caller(args.caller)
     else:
-        sys.exit(run(args.arguments))
+        sys.exit(run(args.arguments, caller=args.caller))
 
 if __name__ == "__main__":
     try:
