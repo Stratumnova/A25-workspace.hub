@@ -82,7 +82,10 @@ def run(action, source=None, dest=None, text=None):
             raise BoundaryError("STOP: invalid ZIP or existing destination")
         with zipfile.ZipFile(src) as z:
             mapping = []
-            for member in z.infolist():
+            members = z.infolist()
+            if len(members) > MAX_ZIP_ENTRIES or sum(m.file_size for m in members) > MAX_ZIP_TOTAL_BYTES or any(m.file_size > MAX_ZIP_MEMBER_BYTES for m in members):
+                raise BoundaryError("STOP: ZIP exceeds resource limits")
+            for member in members:
                 if ((member.external_attr >> 16) & 0o170000) == stat.S_IFLNK:
                     raise BoundaryError("STOP: ZIP symlink")
                 parts = member.filename.rstrip("/").split("/")
@@ -104,7 +107,15 @@ def run(action, source=None, dest=None, text=None):
                 else:
                     out.parent.mkdir(parents=True, exist_ok=True)
                     with z.open(member) as f, out.open("xb") as g:
-                        shutil.copyfileobj(f, g)
+                        remaining = member.file_size
+                        while remaining:
+                            chunk = f.read(min(1024 * 1024, remaining))
+                            if not chunk:
+                                raise IOError("ZIP member truncated")
+                            g.write(chunk)
+                            remaining -= len(chunk)
+                        if f.read(1):
+                            raise BoundaryError("STOP: ZIP member exceeds declared size")
                     with z.open(member) as f:
                         expected = hashlib.sha256(f.read()).digest()
                     if hashlib.sha256(out.read_bytes()).digest() != expected:
