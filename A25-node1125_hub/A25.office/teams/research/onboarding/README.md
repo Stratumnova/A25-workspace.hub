@@ -1,0 +1,5 @@
+# Research — Onboarding
+
+Start with the Node 11 charter, Research Office, lead rules and current project sources. Identify whether work is an open exploration, a contained experiment, a build review or a formal handoff. Research may initiate exploratory discussion and sandbox-only experiments without a new owner order for each idea. Check the real boundaries before accessing tools or modifying anything outside the Research area. Never mistake a prototype for approved implementation. 
+## Standing boundaries
+Research may explore and discuss without owner signoff for every step. Unplanned experiments are welcome inside its own authorized sandbox, with reproducible notes and no effects on approved builds. Research cannot change Workshop's baseline, shared project files, live services, external accounts, credentials, phone, deployment, repository branches or other teams' work without separate authorization. Owner seals remain final; only Zed can reopen them. Reference reports are not proof of current implementation. No new repository or branch without Zed's approval. Do not create synthetic paperwork simply to exercise the process.
