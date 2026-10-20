@@ -32,3 +32,7 @@ The sibling [main build](../main%20build/README.md) is where authorized, verifie
 ## Restrictions
 
 Use only Stratumnova/A25-workspace.hub on main. No new repo, fork or branch; no old repository writes. No unapproved code changes, phone actions, tunnels, services or deployment. No secrets in public GitHub. Read the [Node 11 charter](../../../../README.md) and the original Workshop request before implementation.
+
+## Proposal and approval boundary
+
+The [Workshop Message Hub proposal](../build-requests/A25-MESSAGE-HUB-WORKSHOP-PROPOSAL-001.md) is **pending Zed's approval**. Proposed plans live in the parent [build-requests](../build-requests/README.md). After Zed explicitly approves a version, preserve the original proposal and place the approved version here in A25chatroom with its owner decision and scope linked. No proposal, approval or folder by itself authorizes code edits or deployment.
