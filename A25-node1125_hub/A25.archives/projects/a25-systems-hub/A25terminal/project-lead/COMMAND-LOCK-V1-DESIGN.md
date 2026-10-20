@@ -26,3 +26,6 @@ First build a self-contained lock-state and gateway prototype in the authorized 
 - Locking legacy command routes requires separate integration; no V1 guarantee until verified.
 
 **Implementation status:** UNKNOWN; design is not deployment authorization.
+
+## Owner expansion — outsider and cross-caller enforcement (2026-10-20)
+**ADOPTED requirement:** The single master lock must reject commands from *every* caller, including the owner, GPT, Claude, bots, unknown/unauthorized callers and concurrent sessions. Test identities and authorization separately from locked-state enforcement. An unrecognized caller must not acquire command capability by choosing an identity label, invoking the gateway directly, or accessing an alternate route. Test unauthorized unlock, missing credentials, wrong credentials, replay/concurrency, and bypass attempts. Existing terminal bridges and direct Termux access remain **outside the prototype lock** until independently inventoried and integrated; do not claim protection against outsiders until ingress/authentication and all reachable command routes are verified. Avoid testing against actual outside users or networks; use simulated unauthenticated callers in the disposable test environment.
