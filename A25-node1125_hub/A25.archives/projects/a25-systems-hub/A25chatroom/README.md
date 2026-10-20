@@ -2,13 +2,13 @@
 
 Owner: Zed
 Parent: [A25 Systems Hub](../README.md)
-Status: PROVISIONAL WORKSPACE DRAFT — awaiting Zed's explicit layout approval; no implementation authorized
+Status: OWNER-APPROVED workspace layout and Chatroom V1 plan; implementation not verified
 
 The A25 Chatroom is the first independent component of the wider A25 Systems Hub. It is designed, tested, repaired and recovered **here**, without moving the component folder later. Its planned purpose is durable messaging for Zed, GPT and Claude, including GPT-led, Claude-led and Shared Roundtable spaces; these labels indicate work leadership, not exclusive access.
 
-## Approval gate
+## Approval record
 
-The layout and onboarding here were created before the owner-review staging process. They are provisional, **not approved**. Review the [Chatroom workspace build request](../../build-request/a25-systems-hub-A25chatroom/README.md). Only after Zed approves should the accepted version be recorded here as the approved project setup. No build authorization is implied.
+Zed approved this workspace and the Chatroom V1 plan. See [Approved Build Plan V1](APPROVED-BUILD-PLAN-V1.md). The [original workspace request](../../build-request/a25-systems-hub-A25chatroom/README.md) remains a historical draft; implementation and deployment are separate from plan approval.
 
 ## Using this room
 
@@ -16,6 +16,6 @@ Read [project onboarding](ONBOARDING.md) before acting. Use [Archives inbox](arc
 
 Build-specific records and source belong in this component folder. When ready, an authorized, verified integration may connect this component through the sibling [main build](../main%20build/README.md); integration must not relocate the source of truth. This is not a live chat server or live message database. No forks, branches, deployments, phone actions or secrets in public GitHub.
 
-## Proposal and approval boundary
+## Approved plan and source
 
-The [Workshop Message Hub proposal](../build-requests/A25-MESSAGE-HUB-WORKSHOP-PROPOSAL-001.md) is **pending Zed's approval**. Proposed plans live in the parent [build-requests](../build-requests/README.md). After Zed explicitly approves a version, preserve the original proposal and place the approved version here in A25chatroom with its owner decision and scope linked. No proposal, approval or folder by itself authorizes code edits or deployment.
+[Approved Chatroom Build Plan V1](APPROVED-BUILD-PLAN-V1.md) is the owner-adopted version. The [original Workshop proposal](../build-requests/A25-MESSAGE-HUB-WORKSHOP-PROPOSAL-001.md) remains unchanged as a historical source. No runtime implementation or deployment is verified by this documentation.
