@@ -6,6 +6,8 @@ No shell execution, service control, network calls, or password handling.
 import argparse
 import hashlib
 import json
+import os
+import tempfile
 from pathlib import Path
 import shutil
 import stat
@@ -57,10 +59,29 @@ def run(action, source=None, dest=None, text=None):
         return {"created": source}
     if action == "edit":
         p = target(source, True)
-        if not p.is_file():
-            raise BoundaryError("STOP: edit requires file")
-        p.write_text(text or "", encoding="utf-8")
-        return {"edited": source}
+        if not p.is_file() or p.is_symlink():
+            raise BoundaryError("STOP: edit requires ordinary file")
+        original_mode = stat.S_IMODE(p.stat().st_mode)
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode="w", encoding="utf-8", dir=p.parent,
+                prefix=".a25-edit-", suffix=".tmp", delete=False
+            ) as handle:
+                temporary = Path(handle.name)
+                handle.write(text or "")
+                handle.flush()
+                os.fsync(handle.fileno())
+            verify_root()
+            if target(source, True) != p or p.is_symlink() or not p.is_file():
+                raise BoundaryError("STOP: edit target changed")
+            os.chmod(temporary, original_mode)
+            os.replace(temporary, p)
+            temporary = None
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
+        return {"edited": source, "write": "atomic-replace"}
     if action in ("copy", "move"):
         src = target(source, True)
         dst = target(dest)
