@@ -5,6 +5,9 @@ Charter: https://github.com/Stratumnova/A25-workspace.hub/blob/main/A25-node1125
 
 **This is where every new project begins and remains.** A project's folder is both its active working area and its permanent archive. No separate active-session folder, transfer step, artificial closeout or mandatory archival action is needed. Inactivity does not delete, move or finish a project.
 
+## Workspace approval staging
+- [Build Requests](build-request/README.md) — proposed workspace layouts and onboarding drafts; publish approved versions to their component homes only after Zed approves
+
 ## Current project landing pages
 - [A25 Systems Hub](a25-systems-hub/README.md) — official successor project to historical Pocket Server; Message Hub first; Workshop build authorization pending
 - [Workstation Assistant Bot](workstation-assistant-bot/README.md) — future document intake, contributor guidance and template preparation before formal filing; requirements only
@@ -12,7 +15,7 @@ Charter: https://github.com/Stratumnova/A25-workspace.hub/blob/main/A25-node1125
 - [Security Bot](security-bot/README.md) — future change-audit bot; original requirements linked; build not assigned
 
 ## Working in a project
-Create a project folder when actual project work starts. Use its README to explain purpose, current known status, owning team, active questions and recovery path. Keep substantive design discussions, working notes, actual implementation, original evidence links, tests, failures, decisions, handoffs and later resumptions with that same project. Organize internal subfolders only when the work needs them; avoid empty templates and duplicate source files.
+Stage proposed component workspace layouts in Build Requests for owner review. Once approved, publish the accepted version at its permanent component location. Create a project folder when actual project work starts. Use its README to explain purpose, current known status, owning team, active questions and recovery path. Keep substantive design discussions, working notes, actual implementation, original evidence links, tests, failures, decisions, handoffs and later resumptions with that same project. Organize internal subfolders only when the work needs them; avoid empty templates and duplicate source files.
 
 The Office handles team orders and coordination; A25.chat handles free chat. Project-specific conversations and technical records belong with the project even when they originate in those areas, using links or properly attributed copies as appropriate.
 
