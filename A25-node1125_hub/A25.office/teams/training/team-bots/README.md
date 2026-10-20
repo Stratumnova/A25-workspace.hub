@@ -1,0 +1,6 @@
+# Team Bot Registry — Map
+
+Each A25 team may request or sponsor small local bots. Candidate areas include Archives indexing, Workshop build-state summaries, Security evidence routing, Audits source comparisons, Legal-Private public-safe navigation only, Research topic indexing, Sales approved explanations, Training self-maintenance, and A25-project-11 project navigation. These are **examples, not approved or implemented bots**. Each actual bot needs a team owner, precise scope, inputs, outputs, permissions, escalation and status. Do not create empty bot projects.
+
+## Standing boundaries
+Training builds and evaluates lightweight local bots, not replacements for owner authority or unrestricted AI agents. Team source records remain reference until verified or owner-adopted. Preserve original evidence, disagreements and valid owner seals. Label experiments, capabilities and limitations honestly. Do not claim a bot is trained, deployed, accurate or safe without corresponding evidence. This folder does not authorize access to private data, downloads of model weights, training runs on the phone, installation, live service changes, new repositories or branches, or deployment to another team.
