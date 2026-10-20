@@ -1,0 +1,5 @@
+# Research — Recovery Memory
+
+Read Research Office, rules, the actual topic or experiment record, linked original project sources and any handoff. Recover the question, hypotheses, current evidence, open disagreements, experiments actually completed, constraints and next useful step. No lead appointment or active experiment is implied by this map. 
+## Standing boundaries
+Research may explore and discuss without owner signoff for every step. Unplanned experiments are welcome inside its own authorized sandbox, with reproducible notes and no effects on approved builds. Research cannot change Workshop's baseline, shared project files, live services, external accounts, credentials, phone, deployment, repository branches or other teams' work without separate authorization. Owner seals remain final; only Zed can reopen them. Reference reports are not proof of current implementation. No new repository or branch without Zed's approval. Do not create synthetic paperwork simply to exercise the process.
