@@ -33,8 +33,10 @@ class PersistentDispatcher:
         with self._guard:
             if self._lock_state.status()["locked"]:
                 raise PermissionError("STOP: persistent master lock engaged")
-            # Supervisor registers child before releasing its own lock.
-            return self._supervisor.dispatch(argv, authorized=True)
+        # Never hold dispatcher guard while waiting for a child. The supervisor
+        # atomically rejects or registers dispatch against its own lock; a
+        # simultaneous lock either wins first or cancels the registered child.
+        return self._supervisor.dispatch(argv, authorized=True)
 
     def unlock(self, credential):
         if not self._verify_owner(credential):
