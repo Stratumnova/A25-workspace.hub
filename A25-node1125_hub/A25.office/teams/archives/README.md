@@ -1,26 +1,18 @@
 # Archives Team — Office Entry
 
-RECORD: A25.office/teams/archives/README.md (stable landing README)
-OWNER: Zed
-TEAM: A25 Archives / A25-AG-GPT01
-STATUS: OWNER-AUTHORIZED LANDING AREA; NOT A TESTED BOT OR DEPLOYED SERVICE
-TIME: GitHub commit timestamp is the creation receipt; no wall-clock time inferred
-AUTHORITY: A25-node1125_hub/README.md
+Owner: Zed
+Team: A25 Archives
+Charter: [Node 11 Hub](../../../../README.md)
 
 ## Purpose
-Generic onboarding for any Archives AI, human or future bot.
+Archives maintains source custody, navigation, recovery pointers and original evidence for the A25 workspace. This is the team Office, not a second project storage area.
 
-## What belongs here
-Lead rules and memory; intake requests and replies; project navigation sidecars.
+## Begin here
 
-## How to use it
-Start at root charter, then `lead/README.md` and `onboarding/README.md`. New requests go to `requests/incoming/`, answers to `requests/responses/`; source project records go to `../../../A25.archives/`. The team lead does not gain authority over other teams.
+Read the charter, [Archives active-project home](../../../../A25.archives/README.md), and the [project workspace](../../../../A25.archives/projects/README.md). Then read `lead/README.md` and `onboarding/README.md` for the Archives team. Use `requests/incoming/` for real intake, `requests/responses/` for answers and `project-sidecars/` for pointers.
+
+**Every new project starts under A25.archives/projects/ and stays in that folder, active or inactive.** Archives helps keep it recoverable without imposing a second active-session folder or moving it at closeout.
 
 ## Rules
-- Read the root charter and this map before posting.
-- Use the existing `Stratumnova/A25-workspace.hub` repository on `main`. Never create a branch or repository.
-- New dated records use a descriptive project/team/type/UTC-timestamp filename; record full author, time source, status and links in the file. If clock unavailable, ask Zed.
-- Preserve originals; use new correction/addendum records, not silent replacement.
-- Never invent source contents, verification, owner approval or seal. Owner-sealed material is trusted A25 material and not reopened by AI.
-- No secrets or real private documents in this public workspace.
-- Creating a folder or README does not authorize project builds, deployment, migrations or team appointments.
+
+Use the existing repository on `main`; never invent source material, appointments, timestamps, tests or approvals. Preserve original records and owner seals, record conflicting findings, and distinguish REFERENCE, HISTORICAL CLAIM, VERIFIED, ADOPTED, SUPERSEDED and UNKNOWN. New dated records follow the charter's UTC metadata rules. No sensitive private data in public GitHub. Folder setup is not authority to deploy or operate live systems.
