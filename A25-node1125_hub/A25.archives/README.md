@@ -1,26 +1,24 @@
-# A25 Archives — Storage Entry
+# A25 Archives — Active Workspace and Permanent Project Home
 
-RECORD: A25.archives/README.md (stable landing README)
-OWNER: Zed
-TEAM: A25 Archives / A25-AG-GPT01
-STATUS: OWNER-AUTHORIZED LANDING AREA; NOT A TESTED BOT OR DEPLOYED SERVICE
-TIME: GitHub commit timestamp is the creation receipt; no wall-clock time inferred
-AUTHORITY: A25-node1125_hub/README.md
+Owner: Zed
+Status: Owner-authorized Archives operating layout
+Charter: https://github.com/Stratumnova/A25-workspace.hub/blob/main/A25-node1125_hub/README.md
 
-## Purpose
-Durable project records, source evidence, owner seals and owner-approved Office history.
+## One place for work and history
+**Every new project starts in A25.archives/projects/.** That same folder is its active workspace while work is underway and its durable archive when work stops, whether temporarily or forever. There is no separate active-sessions tree and no required migration or closeout. A project may be resumed in place later without losing its earlier context.
 
-## What belongs here
-Project registry, project folders, source evidence, seal records and historical consolidation.
+Each project keeps its working conversations, designs, source references, implementation history, reports, experiments, failures, decisions and recovery information together. Make the folder understandable to a new human or AI without relying on a previous chat session. Project working records remain distinct from informal free conversation in A25.chat and team coordination in A25.office.
 
-## How to use it
-Archives creates a project folder when an authorized request or work order requires it. Keep design-to-finish conversations, reports and tests with the project; make each folder portable. Read `../A25.office/teams/archives/README.md` for team operations.
+## Navigation
+- `projects/`: active, paused and historical projects in the same canonical location
+- `registry/`: optional navigation to real project folders and their last known state
+- `evidence/`: shared evidence pointers when a project-local record is insufficient
+- `seals/`: original owner-sealed records and scope
+- `office-history/`: owner-approved Office history consolidation
+- `onboarding/`: Archives custody guidance
 
-## Rules
-- Read the root charter and this map before posting.
-- Use the existing `Stratumnova/A25-workspace.hub` repository on `main`. Never create a branch or repository.
-- New dated records use a descriptive project/team/type/UTC-timestamp filename; record full author, time source, status and links in the file. If clock unavailable, ask Zed.
-- Preserve originals; use new correction/addendum records, not silent replacement.
-- Never invent source contents, verification, owner approval or seal. Owner-sealed material is trusted A25 material and not reopened by AI.
-- No secrets or real private documents in this public workspace.
-- Creating a folder or README does not authorize project builds, deployment, migrations or team appointments.
+## Project lifecycle
+Start in projects/ when real work begins. Keep working there while active. If it pauses, leave it where it is; mark status only when known, without inventing a closure or moving files. If nobody returns, the existing folder is already the archive. Resume the same project rather than creating a second home.
+
+## Custody
+Archives maintains navigation and preservation, not authority over other teams' technical decisions. Preserve original records and source attribution, distinguish historical claims from verification and owner adoption, and honor owner seals. No private records or secrets in public GitHub. Only the existing repository and main branch are authorized. Folder structure does not authorize deployment or live-system changes.
