@@ -6,6 +6,7 @@ Charter: https://github.com/Stratumnova/A25-workspace.hub/blob/main/A25-node1125
 **This is where every new project begins and remains.** A project's folder is both its active working area and its permanent archive. No separate active-session folder, transfer step, artificial closeout or mandatory archival action is needed. Inactivity does not delete, move or finish a project.
 
 ## Current project landing pages
+- [A25 Systems Hub](a25-systems-hub/README.md) — official successor project to historical Pocket Server; Message Hub first; Workshop build authorization pending
 - [Workstation Assistant Bot](workstation-assistant-bot/README.md) — future document intake, contributor guidance and template preparation before formal filing; requirements only
 - [Archives Bot](archives-bot/README.md) — future project intake, order routing and recovery assistant; requirements only
 - [Security Bot](security-bot/README.md) — future change-audit bot; original requirements linked; build not assigned
