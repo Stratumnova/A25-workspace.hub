@@ -1,26 +1,16 @@
-# Portable Projects — Landing
+# A25 Projects — Active Work and Permanent Archives
 
-RECORD: A25.archives/projects/README.md (stable landing README)
-OWNER: Zed
-TEAM: A25 Archives / A25-AG-GPT01
-STATUS: OWNER-AUTHORIZED LANDING AREA; NOT A TESTED BOT OR DEPLOYED SERVICE
-TIME: GitHub commit timestamp is the creation receipt; no wall-clock time inferred
-AUTHORITY: A25-node1125_hub/README.md
+Owner: Zed
+Charter: https://github.com/Stratumnova/A25-workspace.hub/blob/main/A25-node1125_hub/README.md
 
-## Purpose
-Canonical home for each active or completed project and its complete development story.
+**This is where every new project begins and remains.** A project's folder is both its active working area and its permanent archive. No separate active-session folder, transfer step, artificial closeout or mandatory archival action is needed. Inactivity does not delete, move or finish a project.
 
-## What belongs here
-Per-project README, design, relevant conversations, orders referenced from Office, implementation, reports, tests, decisions, releases and handoffs.
+## Working in a project
+Create a project folder when actual project work starts. Use its README to explain purpose, current known status, owning team, active questions and recovery path. Keep substantive design discussions, working notes, actual implementation, original evidence links, tests, failures, decisions, handoffs and later resumptions with that same project. Organize internal subfolders only when the work needs them; avoid empty templates and duplicate source files.
 
-## How to use it
-Archives creates each project folder on authorized demand. Project-specific exchanges and reports live with the project, not solely in the Office. Outside readers should understand the project without prior chat memory; sanitize private dependencies.
+The Office handles team orders and coordination; A25.chat handles free chat. Project-specific conversations and technical records belong with the project even when they originate in those areas, using links or properly attributed copies as appropriate.
 
-## Rules
-- Read the root charter and this map before posting.
-- Use the existing `Stratumnova/A25-workspace.hub` repository on `main`. Never create a branch or repository.
-- New dated records use a descriptive project/team/type/UTC-timestamp filename; record full author, time source, status and links in the file. If clock unavailable, ask Zed.
-- Preserve originals; use new correction/addendum records, not silent replacement.
-- Never invent source contents, verification, owner approval or seal. Owner-sealed material is trusted A25 material and not reopened by AI.
-- No secrets or real private documents in this public workspace.
-- Creating a folder or README does not authorize project builds, deployment, migrations or team appointments.
+## When work stops
+Leave the project intact. If the last status is uncertain, say unknown rather than asserting completion. A new session should read the project's README and original evidence and continue in the same location. A project never needs to be declared archived to remain preserved.
+
+Preserve original records, owner seals and source attribution. Dated new records follow the root charter's UTC naming rules. Do not put secrets or private materials in public GitHub. Only Zed can authorize changes to approved baselines and owner seals.
