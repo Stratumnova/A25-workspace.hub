@@ -1,0 +1,8 @@
+# Security Lead — Recovery Sources
+
+OWNER: Zed
+STATUS: Security Team navigation only; not a lead appointment or live-change authorization
+CHARTER: https://github.com/Stratumnova/A25-workspace.hub/blob/main/A25-node1125_hub/README.md
+
+Read the [historical Security Team home](https://github.com/Stratumnova/A25-Training-Workspace/blob/coord/a25-namespace-trial-001/project%20lead/leadership/security-team/README.md), [lead handoff](https://github.com/Stratumnova/A25-Training-Workspace/blob/coord/a25-namespace-trial-001/project%20lead/leadership/security-team/team-lead/README.md), [onboarding](https://github.com/Stratumnova/A25-Training-Workspace/blob/coord/a25-namespace-trial-001/project%20lead/leadership/security-team/onboarding/README.md), [original Workshop security order](https://github.com/Stratumnova/A25-Training-Workspace/blob/8e919b886abbafcef857a4ba87d88a6eb446e3e2/project%20lead/leadership/terminal-workshop/workshop%20clean%20up%20notes/A25-TW-SEC-O001-CRITICAL-BRIDGE-AUTH-2026-10-19.md) and [leadership-pool notice](https://github.com/Stratumnova/A25-Training-Workspace/blob/40e75d615dfff1841d40380273a27284cdd8ffb8/project%20lead/leadership-pool/POOL-2026-10-19-SECURITY-BRIDGE-EXPOSURE.md). At that historical checkpoint the lead appointment and remediation were not established. Do not assume these statuses remain current. Link future real-work handoffs here rather than duplicating old records. 
+Preserve originals and owner seals. Distinguish REFERENCE, HISTORICAL CLAIM, VERIFIED, ADOPTED, SUPERSEDED and UNKNOWN. Never publish secrets. No terminal, phone, server, credential or deployment action is authorized by these documents. Use only this hub's main branch for new Node 11 records.
