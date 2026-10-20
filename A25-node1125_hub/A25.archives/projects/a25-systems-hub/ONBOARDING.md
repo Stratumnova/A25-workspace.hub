@@ -21,3 +21,7 @@ Future components such as terminals, tunnels, identity, storage and recovery get
 Each component room contains its own team inbox/outbox areas as needed. Workshop lead coordinates plans and approved orders; builders perform assigned work; Security reviews security; Archives indexes and preserves; Zed controls owner decisions. Teams stay in their own lanes. Leave notes in another team's area only when asked or explicitly permitted. Cross-team requests and replies identify source, author, scope and status. Formal Office work orders and official responses remain in Office, with pointers into component records.
 
 Use the charter's real UTC timestamps and evidence labels; never invent verification, approvals, completed tests or attribution. No forks, branches or new repositories, and no writes to historical repositories. No source implementation, live services, phone/tunnel changes or deployment without a separate approved order. No secrets in public GitHub.
+
+## Build request and approval path
+
+New component proposals begin in [build-requests](build-requests/README.md), separate from the component workspaces. The [Message Hub proposal](build-requests/A25-MESSAGE-HUB-WORKSHOP-PROPOSAL-001.md) is pending owner review. Only after Zed explicitly approves a version should that approved version be placed in [A25chatroom](A25chatroom/README.md), with the original proposal retained as an identifiable historical record. Each later component follows the same pattern. Approval of a plan does not automatically authorize implementation.
