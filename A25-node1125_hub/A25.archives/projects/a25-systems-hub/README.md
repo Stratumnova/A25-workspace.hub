@@ -24,6 +24,10 @@ The A25 Systems Hub is the planned official successor to the historical Pocket S
 6. Controlled terminal/workshop access, action audit and separation of messaging from command execution.
 7. Backups, restore checks, recovery, independent verification, owner-approved migration and eventual retirement of the old Pocket Server.
 
+## Team workspace and onboarding
+
+Read [project onboarding](ONBOARDING.md) before filing or acting. The [chatroom work area](chatroom/README.md) holds the first milestone's project records. Each team has separate project exchange shelves: [Archives inbox](archives/inbox/README.md) / [outbox](archives/outbox/README.md), [Security inbox](security/inbox/README.md) / [outbox](security/outbox/README.md), and [Builders inbox](builders/inbox/README.md) / [outbox](builders/outbox/README.md). The [project lead folder](project-lead/README.md) holds Workshop leadership notes. These shelves do not replace official Office orders or grant cross-team access.
+
 ## Source and coordination links
 
 - [Archives setup request](../../../A25.office/teams/archives/requests/incoming/A25-SYSTEMS-HUB-AG-WR-20261020T020916Z.md)
