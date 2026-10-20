@@ -1,26 +1,9 @@
-# Archives Project Registry
+# A25 Archives — Project Navigation
 
-RECORD: A25.archives/registry/README.md (stable landing README)
-OWNER: Zed
-TEAM: A25 Archives / A25-AG-GPT01
-STATUS: OWNER-AUTHORIZED LANDING AREA; NOT A TESTED BOT OR DEPLOYED SERVICE
-TIME: GitHub commit timestamp is the creation receipt; no wall-clock time inferred
-AUTHORITY: A25-node1125_hub/README.md
+Owner: Zed
 
-## Purpose
-Index of project folders, statuses, responsible teams and source links.
+This is a navigation index for **real projects** stored in ../projects/. A project remains at the same location whether active, paused, completed or never revisited. Indexing must not move, delete or duplicate it.
 
-## What belongs here
-Dated project index entries, original project paths and owner decisions.
+When useful, link the project README, owning team, current known work and last supported status. Distinguish ACTIVE, PAUSED, COMPLETED and UNKNOWN only when evidence supports the label; a lack of recent activity is not proof of completion. Record owner decisions separately from reported progress.
 
-## How to use it
-Index must distinguish project existence, implementation state and owner-sealed acceptance. Do not silently delete an entry when a project is retired.
-
-## Rules
-- Read the root charter and this map before posting.
-- Use the existing `Stratumnova/A25-workspace.hub` repository on `main`. Never create a branch or repository.
-- New dated records use a descriptive project/team/type/UTC-timestamp filename; record full author, time source, status and links in the file. If clock unavailable, ask Zed.
-- Preserve originals; use new correction/addendum records, not silent replacement.
-- Never invent source contents, verification, owner approval or seal. Owner-sealed material is trusted A25 material and not reopened by AI.
-- No secrets or real private documents in this public workspace.
-- Creating a folder or README does not authorize project builds, deployment, migrations or team appointments.
+Keep this index lightweight. Do not create a register entry or status report merely to prove the system works. Preserve originals and owner seals; follow the root charter for dated records and public-safe content.
