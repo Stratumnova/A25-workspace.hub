@@ -19,9 +19,7 @@ Rules, work orders, appointments, role definitions, workflow instructions, or au
 
 A historical record marked **PASS, TESTED, VERIFIED**, or otherwise recording a completed test is to be carried forward **with that stated result**. Do not automatically downgrade it to uncertain or require the same test to be repeated simply because a new AI reads it, because it was performed in an earlier session, or because it is stored in GitHub.
 
-Preserve the recorded scope, version, environment, evidence, and limitations. A historical PASS establishes the recorded result under its recorded conditions, not an unperformed test of a later version.
-
-Zed is the final A25 authority: results and decisions accepted by Zed remain accepted unless Zed says otherwise. If genuinely new contradictory evidence appears, record it and bring it to Zed rather than silently reversing the result.
+Preserve the recorded scope, version, environment, evidence, and limitations. A historical PASS establishes the recorded result under its recorded conditions, not an unperformed test of a later version. Zed is the final A25 authority: results and decisions accepted by Zed remain accepted unless Zed says otherwise. If genuinely new contradictory evidence appears, record it and bring it to Zed rather than silently reversing the result.
 
 ## Where active work belongs
 
@@ -35,10 +33,10 @@ For new-session recovery, start with the current hub `START-HERE.md` and owner d
 
 ## Repository map — branches of A25-workspace.hub
 
-Branch inventory retrieved from GitHub on 2026-10-21. The descriptions below are **inferred from branch names only**; branch contents have not been inspected for this map. There is **one branch total (main only)**:
+Branch inventory: **one branch total** (`main` only).
 
 | Branch | Apparent purpose (name-based inference) |
 |---|---|
 | `main` | Primary branch; reference declaration committed |
 
-This map is a navigation aid, not a verified description of each branch's implementation. The owner has directed a later step to copy this declaration into each non-main branch; **that step is not performed by this edit**.
+This map is a navigation aid, not a verified description of repository implementation. No other branches exist to receive copies of this declaration.
